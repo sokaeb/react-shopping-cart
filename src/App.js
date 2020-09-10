@@ -21,10 +21,10 @@ function App() {
 	};
 
 	const removeItem = item => {
-		console.log(item)
+		// console.log(item)
 		setCart(
 			cart.filter((itm) => (itm.id !== item.id))
-			)}
+			)};
 
 	return (
 		<ProductContext.Provider value={{products, addItem}}>
