@@ -4,13 +4,14 @@ import { CartContext } from '../contexts/CartContext';
 // Components
 import Item from './ShoppingCartItem';
 
-const cart = useContext(CartContext);
 
 const ShoppingCart = () => {
-	const getCartTotal = {
-		return( cart.reduce((acc, value) => {
+	const cart = useContext(CartContext);
+	
+	const getCartTotal = () => {
+		return cart.reduce((acc, value) => {
 			return acc + value.price;
-		}, 0).toFixed(2))
+		}, 0).toFixed(2);
 	};
 
 	return (
